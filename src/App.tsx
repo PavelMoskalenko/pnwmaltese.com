@@ -4,75 +4,75 @@ import { Phone, Mail, MessageSquare, X, ChevronLeft, ChevronRight } from 'lucide
 // Image configuration remains unchanged...
 const images = [
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
+    small: '/photos/IMG_2049.jpg',
+    medium: '/photos/IMG_2049.jpg',
+    large: '/photos/IMG_2049.jpg',
     alt: 'Maltese puppy hero shot'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
+    small: '/photos/IMG_1656.jpg',
+    medium: '/photos/IMG_1656.jpg',
+    large: '/photos/IMG_1656.jpg',
     alt: 'Adorable Maltese puppy looking at camera'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
+    small: '/photos/IMG_1666.jpg',
+    medium: '/photos/IMG_1666.jpg',
+    large: '/photos/IMG_1666.jpg',
     alt: 'Maltese puppy playing with toy'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
+    small: '/photos/IMG_1682.jpg',
+    medium: '/photos/IMG_1682.jpg',
+    large: '/photos/IMG_1682.jpg',
     alt: 'Maltese puppy resting'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
+    small: '/photos/IMG_1759.jpg',
+    medium: '/photos/IMG_1759.jpg',
+    large: '/photos/IMG_1759.jpg',
     alt: 'Maltese puppy portrait'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
+    small: '/photos/IMG_1771.jpg',
+    medium: '/photos/IMG_1771.jpg',
+    large: '/photos/IMG_1771.jpg',
     alt: 'Maltese puppy close-up'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
+    small: '/photos/IMG_1776.jpg',
+    medium: '/photos/IMG_1776.jpg',
+    large: '/photos/IMG_1776.jpg',
     alt: 'Maltese puppy outdoors'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
+    small: '/photos/IMG_1779.jpg',
+    medium: '/photos/IMG_1779.jpg',
+    large: '/photos/IMG_1779.jpg',
     alt: 'Maltese puppy playing'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
+    small: '/photos/IMG_1783.jpg',
+    medium: '/photos/IMG_1783.jpg',
+    large: '/photos/IMG_1783.jpg',
     alt: 'Maltese puppy sitting'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
+    small: '/photos/IMG_1802.jpg',
+    medium: '/photos/IMG_1802.jpg',
+    large: '/photos/IMG_1802.jpg',
     alt: 'Maltese puppy group'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
+    small: '/photos/IMG_1803.jpg',
+    medium: '/photos/IMG_1803.jpg',
+    large: '/photos/IMG_1803.jpg',
     alt: 'Maltese puppies together'
   },
   {
-    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
-    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
-    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
+    small: '/photos/IMG_2045.jpg',
+    medium: '/photos/IMG_2045.jpg',
+    large: '/photos/IMG_2045.jpg',
     alt: 'Maltese puppy playing with toys'
   }
 ];
