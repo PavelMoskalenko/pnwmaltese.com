@@ -1,35 +1,79 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Phone, Mail, MessageSquare, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// New image configuration with only the 7 specified images
+// Image configuration remains unchanged...
 const images = [
   {
-    url: 'https://pnwmaltese.com/photos/photo_1_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (1)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2049.png',
+    alt: 'Maltese puppy hero shot'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_2_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (2)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1656.png',
+    alt: 'Adorable Maltese puppy looking at camera'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_3_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (3)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1666.png',
+    alt: 'Maltese puppy playing with toy'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_4_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (4)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1682.png',
+    alt: 'Maltese puppy resting'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_5_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (5)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1759.png',
+    alt: 'Maltese puppy portrait'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_6_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (6)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1771.png',
+    alt: 'Maltese puppy close-up'
   },
   {
-    url: 'https://pnwmaltese.com/photos/photo_7_2025-08-31_12-28-04.jpg',
-    alt: 'Maltese puppy – PNW Maltese (7)'
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1776.png',
+    alt: 'Maltese puppy outdoors'
+  },
+  {
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1779.png',
+    alt: 'Maltese puppy playing'
+  },
+  {
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1783.png',
+    alt: 'Maltese puppy sitting'
+  },
+  {
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1802.png',
+    alt: 'Maltese puppy group'
+  },
+  {
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_1803.png',
+    alt: 'Maltese puppies together'
+  },
+  {
+    small: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
+    medium: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
+    large: 'https://pnwmaltiz.s3.us-east-2.amazonaws.com/IMG_2045.png',
+    alt: 'Maltese puppy playing with toys'
   }
 ];
 
@@ -52,16 +96,10 @@ function App() {
   const [age, setAge] = useState({ weeks: 0, days: 0 });
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [isImageLoaded, setIsImageLoaded] = useState<boolean[]>(new Array(images.length).fill(false));
-  
-  // Updated birth date to June 29, 2025, America/Los_Angeles timezone
-  const startDate = new Date('2025-06-29T00:00:00-07:00');
-  
+  const startDate = new Date('2024-12-13');
   const phoneNumber = '+12533574306';
   const emailAddress = 'Mariia@pnwmaltese.com';
   const defaultSmsText = "Hi, I'm interested in your Maltese puppies. Could you please provide more information?";
-  
-  // Updated address
-  const address = "4602 216th St Ct E, Spanaway, WA 98387";
 
   const updateAge = useCallback(() => {
     setAge(calculateAge(startDate));
@@ -133,7 +171,9 @@ function App() {
       <div className="relative w-full h-[calc(100vh-100px)] max-h-[800px] sm:max-h-[1000px]">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src={images[0].url}
+            src={images[0].large}
+            srcSet={`${images[0].small} 480w, ${images[0].medium} 800w, ${images[0].large} 1200w`}
+            sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
             alt={images[0].alt}
             className="w-full h-full object-cover object-[center_40%]"
             loading="eager"
@@ -159,7 +199,7 @@ function App() {
                 🐶 Adorable Maltese Puppies for Sale! 🏡
               </h2>
               <p className="text-xl text-gray-700 mb-4">
-                We have <span className="font-semibold">4 girls and 3 boys</span> looking for their forever homes! ❤️ These sweet and fluffy Maltese puppies are <span className="font-semibold">home-raised</span>, well-socialized, and pee pad trained, making them the perfect addition to any loving family.
+                We have <span className="font-semibold">4 girls and 3 boys</span> looking for their forever homes! ❤️
               </p>
             </div>
 
@@ -167,15 +207,15 @@ function App() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Location and Age */}
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold mb-4">📍 Location & Age</h3>
+                <h3 className="text-2xl font-semibold mb-4">Location & Age</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <span className="font-semibold mr-2">📍 Location:</span>
-                    {address}
+                    Des Moines, WA
                   </li>
                   <li className="flex items-center">
                     <span className="font-semibold mr-2">📅 Born on:</span>
-                    June 29, 2025
+                    December 13, 2024
                   </li>
                   <li className="flex items-center">
                     <span className="font-semibold mr-2">🐾 Current Age:</span>
@@ -186,7 +226,7 @@ function App() {
 
               {/* Parents Information */}
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold mb-4">🐾 Parents' Information</h3>
+                <h3 className="text-2xl font-semibold mb-4">Parents' Information</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <span className="font-semibold mr-2">Dad:</span>
@@ -271,9 +311,11 @@ function App() {
                 <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
               )}
               <img
-                src={image.url}
+                src={image.small}
+                srcSet={`${image.small} 480w, ${image.medium} 800w, ${image.large} 1200w`}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 alt={image.alt}
-                loading={index === 0 ? "eager" : "lazy"}
+                loading="lazy"
                 onLoad={() => handleImageLoad(index)}
                 className={`w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 ${
                   isImageLoaded[index] ? 'opacity-100' : 'opacity-0'
@@ -284,31 +326,9 @@ function App() {
         </div>
       </div>
 
-      {/* Contact Information Section */}
-      <div className="w-full bg-gray-50 py-12">
-        <div className="max-w-[1200px] mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">📩 Contact Us</h2>
-          <p className="text-xl text-gray-700 mb-4">
-            DM us for more details or to reserve your puppy!
-          </p>
-          <p className="text-lg text-gray-600">
-            📍 Located in {address}
-          </p>
-          <div className="mt-6">
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleContactClick(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`);
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold"
-            >
-              Get Directions
-            </a>
-          </div>
-        </div>
+      {/* To be continued... */}
+      <div className="w-full bg-gray-50 py-12 text-center">
+        <p className="text-xl text-gray-600 italic">To be continued...</p>
       </div>
 
       {/* Image Modal */}
@@ -350,7 +370,7 @@ function App() {
           {/* Image Container */}
           <div className="relative max-h-[90vh] max-w-[90vw]">
             <img
-              src={images[selectedImageIndex].url}
+              src={images[selectedImageIndex].large}
               alt={images[selectedImageIndex].alt}
               className="max-h-[90vh] max-w-[90vw] object-contain"
               onClick={(e) => e.stopPropagation()}
